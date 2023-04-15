@@ -26,5 +26,17 @@
   margin-bottom: 0.4%;
   font-size: 14px;
   width: 35%
-  
+}
+
+.table {
+  padding-top: 5%;
+}
+
+.buttonGroup {
+  padding-top: 3%; 
+}
+
+.buttonSpacing {
+  padding-left: 2px;
+  padding-right: 2px;
 }

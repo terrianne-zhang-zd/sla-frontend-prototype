@@ -1,6 +1,6 @@
 
 import { Well, Title } from '@zendeskgarden/react-notifications';
-import Button from './Button';
+import Button from './ButtonGroup';
 import React, { ButtonHTMLAttributes } from 'react';
 import { Dropdown, Trigger, Menu, Item } from '@zendeskgarden/react-dropdowns';
 import { Tooltip } from '@zendeskgarden/react-tooltips';
@@ -104,7 +104,9 @@ function Example() {
             <Well>
                 <Title>Reply metrics</Title>
                 Set how quickly you respond to a customer's request
-                <Tables/>
+                <div className="table">
+                    <Tables/>
+                </div>
             </Well>
         </>
     )

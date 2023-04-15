@@ -4,21 +4,7 @@ import { Item, Menu, Label, Field, Dropdown, Autocomplete } from '@zendeskgarden
 import { Row, Col } from '@zendeskgarden/react-grid';
 
 const options = [
-  'Asparagus',
-  'Brussel sprouts',
-  'Cauliflower',
-  'Garlic',
-  'Jerusalem artichoke',
-  'Kale',
-  'Lettuce',
-  'Onion',
-  'Mushroom',
-  'Potato',
-  'Radish',
-  'Spinach',
-  'Tomato',
-  'Yam',
-  'Zucchini'
+  'Calendar hours'
 ];
 
 const Example = () => {
@@ -54,7 +40,7 @@ const Example = () => {
           downshiftProps={{ defaultHighlightedIndex: 0 }}
         >
           <Field>
-            <Label>Choose a vegetable</Label>
+            <Label>Hours of operation</Label>
             <Autocomplete>{selectedItem}</Autocomplete>
           </Field>
           <Menu>

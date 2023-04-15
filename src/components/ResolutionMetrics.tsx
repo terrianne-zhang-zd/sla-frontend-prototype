@@ -5,6 +5,10 @@ import { SplitButton, Button, ChevronButton } from '@zendeskgarden/react-buttons
 import { Dropdown, Menu, Item, Trigger } from '@zendeskgarden/react-dropdowns';
 import { ThemeProvider, DEFAULT_THEME } from '@zendeskgarden/react-theming';
 import { ReactComponent as ChevronIcon } from '@zendeskgarden/svg-icons/src/16/chevron-down-stroke.svg';
+import ButtonGroup from './ButtonGroup';
+import Autocomplete from './Autocomplete';
+import { SM, MD, LG, XL, XXL, XXXL } from '@zendeskgarden/react-typography';
+import { Field, Label, Input } from '@zendeskgarden/react-forms';
 import '../App.css'
 
 const Example = () => {
@@ -49,6 +53,111 @@ const Example = () => {
             Set how long you'll take to solve a request.
             <ButtonWithDropdown/>
         </Well>
+        <Well>
+            <Title>Requester wait time</Title>
+            The time between each public comment from agents, displayed in minutes. The SLA will pause on Pending.
+            <div className='buttonGroup'>
+              <ButtonGroup/>
+            </div>
+            <LG>Set target time</LG>
+            <MD>Urgent tickets</MD>
+            <div style={{display:'flex'}}>
+              <span>
+                <Field>
+                  <Label>Hours</Label>
+                  <Input />
+                </Field>
+              </span>
+              <span>
+                <Field>
+                  <Label>Minutes</Label>
+                  <Input />
+                </Field>
+              </span>
+              <span>
+                <Field>
+                  <Label>Seconds</Label>
+                  <Input />
+                </Field>
+              </span>
+              <span>
+                <Autocomplete/>
+              </span>
+            </div>
+            <MD>High priority tickets</MD>
+            <div style={{display:'flex'}}>
+              <span>
+                <Field>
+                  <Label>Hours</Label>
+                  <Input />
+                </Field>
+              </span>
+              <span>
+                <Field>
+                  <Label>Minutes</Label>
+                  <Input />
+                </Field>
+              </span>
+              <span>
+                <Field>
+                  <Label>Seconds</Label>
+                  <Input />
+                </Field>
+              </span>
+              <span>
+                <Autocomplete/>
+              </span>
+            </div>
+            <MD>Normal priority tickets</MD>
+            <div style={{display:'flex'}}>
+              <span>
+                <Field>
+                  <Label>Hours</Label>
+                  <Input />
+                </Field>
+              </span>
+              <span>
+                <Field>
+                  <Label>Minutes</Label>
+                  <Input />
+                </Field>
+              </span>
+              <span>
+                <Field>
+                  <Label>Seconds</Label>
+                  <Input />
+                </Field>
+              </span>
+              <span>
+                <Autocomplete/>
+              </span>
+            </div>
+            <MD>Low priority tickets</MD>
+            <div style={{display:'flex'}}>
+              <span>
+                <Field>
+                  <Label>Hours</Label>
+                  <Input />
+                </Field>
+              </span>
+              <span>
+                <Field>
+                  <Label>Minutes</Label>
+                  <Input />
+                </Field>
+              </span>
+              <span>
+                <Field>
+                  <Label>Seconds</Label>
+                  <Input />
+                </Field>
+              </span>
+              <span>
+                <Autocomplete/>
+              </span>
+            </div>
+        </Well>
+        
         </>
     )
 };
