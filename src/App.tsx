@@ -2,15 +2,10 @@ import React from 'react';
 import './App.css';
 import { ThemeProvider, DEFAULT_THEME } from '@zendeskgarden/react-theming';
 import ResolutionMetrics from './components/ResolutionMetrics'
-import Autocomplete from './components/Autocomplete';
-import TextButton from './components/TextButton';
-import SolidButton from './components/SolidButton';
 import ReplyMetrics from './components/ReplyMetrics';
 import UpdateMetrics from './components/UpdateMetrics';
 import { SM, MD, LG, XL, XXL, XXXL } from '@zendeskgarden/react-typography';
 import { Anchor } from '@zendeskgarden/react-buttons';
-import ButtonGroup from './components/ButtonGroup';
-
 
 
 function App() {
@@ -40,6 +35,7 @@ function App() {
         <div className='well'>
           <ResolutionMetrics/>
         </div>
+        
       </ThemeProvider>
     </div>
     </>

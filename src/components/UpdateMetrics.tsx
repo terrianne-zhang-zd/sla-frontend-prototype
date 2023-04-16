@@ -21,7 +21,7 @@ const Example = () => {
                 onStateChange={options => Object.hasOwn(options, 'isOpen') && setRotated(options.isOpen)}
               >
                 <Trigger>
-                <div className='buttonRight'>
+                  <div className='buttonRight'>
                   <Button>
                     Add target
                     <Button.EndIcon isRotated={rotated}>

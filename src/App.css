@@ -11,8 +11,6 @@
 .buttonRight {
   float: right;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .title {
@@ -39,4 +37,43 @@
 .buttonSpacing {
   padding-left: 2px;
   padding-right: 2px;
+}
+
+.titleSpacing {
+  padding-top: 5%; 
+}
+
+.medText {
+  padding-top: 2%; 
+  padding-bottom: 0.5%; 
+}
+
+.medTextNearTitle {
+  padding-top: 1%; 
+  padding-bottom: 0.5%; 
+}
+
+.textInWell {
+  width: 92%;
+}
+
+.inputSize {
+  width: 65%; 
+}
+
+.inputSpacing {
+  padding-right: 9%;
+}
+
+.autocompleteSize {
+  width: 120%;
+}
+
+.endPadding {
+  padding-top: 5%;
+  text-align: right;
+}
+
+.saveButton {
+  margin-left: 4%; 
 }

@@ -30,33 +30,29 @@ const Example = () => {
   }, [inputValue]);
 
   return (
-    <Row justifyContent="center">
-      <Col sm={5}>
-        <Dropdown
-          inputValue={inputValue}
-          selectedItem={selectedItem}
-          onSelect={item => setSelectedItem(item)}
-          onInputValueChange={value => setInputValue(value)}
-          downshiftProps={{ defaultHighlightedIndex: 0 }}
-        >
-          <Field>
-            <Label>Hours of operation</Label>
-            <Autocomplete>{selectedItem}</Autocomplete>
-          </Field>
-          <Menu>
-            {matchingOptions.length ? (
-              matchingOptions.map(option => (
-                <Item key={option} value={option}>
-                  <span>{option}</span>
-                </Item>
-              ))
-            ) : (
-              <Item disabled>No matches found</Item>
-            )}
-          </Menu>
-        </Dropdown>
-      </Col>
-    </Row>
+    <Dropdown
+      inputValue={inputValue}
+      selectedItem={selectedItem}
+      onSelect={item => setSelectedItem(item)}
+      onInputValueChange={value => setInputValue(value)}
+      downshiftProps={{ defaultHighlightedIndex: 0 }}
+    >
+      <Field>
+        <Label isRegular>Hours of operation</Label>
+        <Autocomplete>{selectedItem}</Autocomplete>
+       </Field>
+      <Menu>
+        {matchingOptions.length ? (
+          matchingOptions.map(option => (
+            <Item key={option} value={option}>
+              <span>{option}</span>
+            </Item>
+          ))
+        ) : (
+          <Item disabled>No matches found</Item>
+        )}
+      </Menu>
+    </Dropdown>
   );
 };
 

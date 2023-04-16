@@ -9,6 +9,7 @@ import ButtonGroup from './ButtonGroup';
 import Autocomplete from './Autocomplete';
 import { SM, MD, LG, XL, XXL, XXXL } from '@zendeskgarden/react-typography';
 import { Field, Label, Input } from '@zendeskgarden/react-forms';
+import { Anchor } from '@zendeskgarden/react-buttons'
 import '../App.css'
 
 const Example = () => {
@@ -55,105 +56,157 @@ const Example = () => {
         </Well>
         <Well>
             <Title>Requester wait time</Title>
-            The time between each public comment from agents, displayed in minutes. The SLA will pause on Pending.
+            <div className='textInWell'>
+              <MD style={{color:'#68737D'}}>The time between each public comment from agents, displayed in minutes. The SLA will pause on Pending.</MD>
+            </div>
             <div className='buttonGroup'>
               <ButtonGroup/>
             </div>
-            <LG>Set target time</LG>
-            <MD>Urgent tickets</MD>
-            <div style={{display:'flex'}}>
+            <div className='titleSpacing'>
+              <LG style={{color: 'black'}}>Set target time</LG>
+            </div>
+            <div className='medTextNearTitle'>
+              <MD isBold style={{color: 'black'}}>Urgent tickets</MD>
+            </div>
+            <div style={{display:'flex'}} className='inputSize'>
               <span>
-                <Field>
-                  <Label>Hours</Label>
-                  <Input />
-                </Field>
+                <div className='inputSpacing'>
+                  <Field>
+                    <Label isRegular>Hours</Label>
+                    <Input />
+                  </Field>
+                </div>
               </span>
               <span>
-                <Field>
-                  <Label>Minutes</Label>
-                  <Input />
-                </Field>
+                <div className='inputSpacing'>
+                  <Field>
+                    <Label isRegular>Minutes</Label>
+                    <Input />
+                  </Field>
+                </div>
               </span>
               <span>
-                <Field>
-                  <Label>Seconds</Label>
-                  <Input />
-                </Field>
+                <div className='inputSpacing'> 
+                  <Field>
+                    <Label isRegular>Seconds</Label>
+                    <Input />
+                  </Field>
+                </div>
               </span>
               <span>
-                <Autocomplete/>
+                <div className='autocompleteSize'>
+                  <Autocomplete/>
+                </div>
               </span>
             </div>
-            <MD>High priority tickets</MD>
-            <div style={{display:'flex'}}>
+            <div className='medText'>
+              <MD isBold style={{color: 'black'}}>High priority tickets</MD>
+            </div>
+            <div style={{display:'flex'}} className='inputSize'>
               <span>
-                <Field>
-                  <Label>Hours</Label>
-                  <Input />
-                </Field>
+                <div className='inputSpacing'>
+                  <Field>
+                    <Label isRegular>Hours</Label>
+                    <Input />
+                  </Field>
+                </div>
               </span>
               <span>
-                <Field>
-                  <Label>Minutes</Label>
-                  <Input />
-                </Field>
+                <div className='inputSpacing'>
+                  <Field>
+                    <Label isRegular>Minutes</Label>
+                    <Input />
+                  </Field>
+                </div>
               </span>
               <span>
-                <Field>
-                  <Label>Seconds</Label>
-                  <Input />
-                </Field>
+                <div className='inputSpacing'>
+                  <Field>
+                    <Label isRegular>Seconds</Label>
+                    <Input />
+                  </Field>
+                </div>
               </span>
               <span>
-                <Autocomplete/>
+                <div className='autocompleteSize'>
+                  <Autocomplete/>
+                </div>
               </span>
             </div>
-            <MD>Normal priority tickets</MD>
-            <div style={{display:'flex'}}>
+            <div className='medText'>
+              <MD isBold style={{color: 'black'}}>Normal priority tickets</MD>
+            </div>
+            <div style={{display:'flex'}} className='inputSize'>
               <span>
-                <Field>
-                  <Label>Hours</Label>
-                  <Input />
-                </Field>
+                <div className='inputSpacing'>
+                  <Field>
+                    <Label isRegular>Hours</Label>
+                    <Input />
+                  </Field>
+                </div>
               </span>
               <span>
-                <Field>
-                  <Label>Minutes</Label>
-                  <Input />
-                </Field>
+                <div className='inputSpacing'>
+                  <Field>
+                    <Label isRegular>Minutes</Label>
+                    <Input />
+                  </Field>
+                </div>
               </span>
               <span>
-                <Field>
-                  <Label>Seconds</Label>
-                  <Input />
-                </Field>
+                <div className='inputSpacing'>
+                  <Field>
+                    <Label isRegular>Seconds</Label>
+                    <Input />
+                  </Field>
+                </div>
               </span>
               <span>
-                <Autocomplete/>
+                <div className='autocompleteSize'>
+                  <Autocomplete/>
+                </div>
               </span>
             </div>
-            <MD>Low priority tickets</MD>
-            <div style={{display:'flex'}}>
+            <div className='medText'>
+              <MD isBold style={{color: 'black'}}>Low priority tickets</MD>
+            </div>
+            <div style={{display:'flex'}} className='inputSize'>
               <span>
-                <Field>
-                  <Label>Hours</Label>
-                  <Input />
-                </Field>
+                <div className='inputSpacing'>
+                  <Field>
+                    <Label isRegular>Hours</Label>
+                    <Input />
+                  </Field>
+                </div>
               </span>
               <span>
-                <Field>
-                  <Label>Minutes</Label>
-                  <Input />
-                </Field>
+                <div className='inputSpacing'>
+                  <Field>
+                    <Label isRegular>Minutes</Label>
+                    <Input />
+                  </Field>
+                </div>
               </span>
               <span>
-                <Field>
-                  <Label>Seconds</Label>
-                  <Input />
-                </Field>
+                <div className='inputSpacing'>
+                  <Field>
+                    <Label isRegular>Seconds</Label>
+                    <Input />
+                  </Field>
+                </div>
               </span>
               <span>
-                <Autocomplete/>
+                <div className='autocompleteSize'>
+                  <Autocomplete/>
+                </div>
+              </span>
+            </div>
+            <div className='endPadding'>
+              <span>
+                <Anchor href="#default">Cancel</Anchor>
+              </span>
+              <span className='saveButton'>
+                <Button size='small'> Save SLA target</Button>
               </span>
             </div>
         </Well>
